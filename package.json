@@ -1,0 +1,132 @@
+{
+  "name": "@blackbox-vision/react-use-config",
+  "version": "0.0.1",
+  "private": false,
+  "description": "React Slot and Fill implementation made with React.createContext API",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "clean": "rimraf pkg",
+    "publish": "pika publish",
+    "build": "npm run clean && pika build",
+    "test": "jest --passWithNoTests -- -u",
+    "start": "npm run storybook"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg",
+        {
+          "exclude": [
+            "**/*.md",
+            "**/*.tests.*",
+            "**/*.stories.*",
+            "**/__snapshots/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-node",
+        {
+          "exclude": [
+            "**/*.md",
+            "**/*.tests.*",
+            "**/*.stories.*",
+            "**/__snapshots/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-web",
+        {
+          "exclude": [
+            "**/*.md",
+            "**/*.tests.*",
+            "**/*.stories.*",
+            "**/__snapshots/*"
+          ]
+        }
+      ],
+      [
+        "@pika/plugin-build-types",
+        {
+          "exclude": [
+            "**/*.md",
+            "**/*.tests.*",
+            "**/*.stories.*",
+            "**/__snapshots/*"
+          ]
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackBoxVision/react-use-config.git"
+  },
+  "author": "Jonatan E. Salas <jonatan.salas@blackbox-vision.tech>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BlackBoxVision/react-use-config/issues"
+  },
+  "homepage": "https://github.com/BlackBoxVision/react-use-config#readme",
+  "peerDependencies": {
+    "react": "^16.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@pika/pack": "^0.5.0",
+    "@pika/plugin-build-node": "^0.9.2",
+    "@pika/plugin-build-types": "^0.9.2",
+    "@pika/plugin-build-web": "^0.9.2",
+    "@pika/plugin-standard-pkg": "^0.9.2",
+    "@types/react": "^16.9.32",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "chai": "^4.1.2",
+    "eslint": "^6.8.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-import-resolver-lerna": "^1.1.0",
+    "eslint-plugin-flowtype": "^4.7.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "husky": "^4.2.3",
+    "isparta": "^4.1.1",
+    "jest": "^25.2.7",
+    "lint-staged": "^10.1.1",
+    "mocha": "^7.1.1",
+    "prettier": "^2.0.2",
+    "react": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^6.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,ts,tsx}": [
+      "eslint --fix --ext .ts,.tsx,.js",
+      "git add"
+    ]
+  },
+  "dependencies": {}
+}

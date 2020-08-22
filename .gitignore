@@ -1,0 +1,5 @@
+pkg
+build
+coverage
+node_modules
+storybook-static
