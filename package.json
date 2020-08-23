@@ -1,6 +1,6 @@
 {
   "name": "@blackbox-vision/react-use-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "description": "Custom Provider and Hook to manage config in React Apps",
   "publishConfig": {
