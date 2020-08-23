@@ -1,8 +1,25 @@
 # React Use Config [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
-:rocket: Custom Provider and Hook to manage config in React.
+:rocket: Custom Provider and Hook for managing config in React.
 
-## Install
+## Table of contents
+
+- [Use Case](#use-case)
+- [Installation](#installation)
+  - [NPM](#npm)
+  - [YARN](#yarn)
+- [Example Usage](#example-usage)
+- [Provider API](#component-api)
+- [useConfig API](#hooks-api)
+- [Issues](#issues)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Use case
+
+You need a proper way to access config from your react components and custom hooks.
+
+## Installation
 
 You can install this library via NPM or YARN.
 
@@ -18,11 +35,7 @@ npm i @blackbox-vision/react-use-config
 yarn add @blackbox-vision/react-use-config
 ```
 
-## Use case
-
-You need a proper way to access config from your react components and custom hooks.
-
-## Usage
+## Example Usage
 
 The usage is really simple:
 
@@ -55,7 +68,7 @@ import React from 'react';
 import { useConfig } from '@blackbox-vision/react-use-config';
 
 const Header = (props) => {
-  const logoUri = useConfig(c => c.logo);
+  const logoUri = useConfig(config => config?.logo);
 
   return (
     <div>
@@ -68,7 +81,7 @@ const Header = (props) => {
 export default Header;
 ```
 
-## ConfigProvider Props
+## Component API
 
 The `ConfigProvider` component has the following props:
 
