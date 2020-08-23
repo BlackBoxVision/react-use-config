@@ -59,7 +59,7 @@ const config = {
 
 const App = () => (
   <ConfigProvider config={config} debug={false}>
-    <App />
+    <Header />
   </ConfigProvider>
 );
 
