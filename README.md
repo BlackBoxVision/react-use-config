@@ -26,11 +26,35 @@ You need a proper way to access config from your react components and custom hoo
 
 The usage is really simple:
 
+1. Define the `config` and wrap your App in `ConfigProvider`:
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ConfigProvider } from '@blackbox-vision/react-use-config';
+
+import Header from './Header';
+
+const config = {
+  logo: 'https://xyz.com/logo.png',
+};
+
+const App = () => (
+  <ConfigProvider config={config} debug={false}>
+    <App />
+  </ConfigProvider>
+);
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+2. Import the `hook` and consume the config part you really need:
+
 ```javascript
 import React from 'react';
 import { useConfig } from '@blackbox-vision/react-use-config';
 
-const App = (props) => {
+const Header = (props) => {
   const logoUri = useConfig(c => c.logo);
 
   return (
@@ -41,28 +65,7 @@ const App = (props) => {
   );
 };
 
-export default App;
-```
-
-```javascript
-// App.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { ConfigProvider } from '@blackbox-vision/react-use-config';
-
-import App from './App';
-
-const config = {
-  logo: 'https://xyz.com/logo.png',
-};
-
-const App = () => (
-  <ConfigProvider config={} debug={true || false}>
-    <App />
-  </ConfigProvider>
-);
-
-ReactDOM.render(<App />, document.getElementById('root'));
+export default Header;
 ```
 
 ## ConfigProvider Props
