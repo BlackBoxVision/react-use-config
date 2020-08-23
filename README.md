@@ -1,6 +1,6 @@
 # React Use Config [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
-:rocket: Custom Provider and Hook for managing config in React.
+:rocket: Custom Provider and Hook for managing config in React Apps.
 
 ## Table of contents
 
