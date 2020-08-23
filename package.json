@@ -2,7 +2,7 @@
   "name": "@blackbox-vision/react-use-config",
   "version": "0.0.1",
   "private": false,
-  "description": "React Slot and Fill implementation made with React.createContext API",
+  "description": "Custom Provider and Hook to manage config in React",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -127,6 +127,5 @@
       "eslint --fix --ext .ts,.tsx,.js",
       "git add"
     ]
-  },
-  "dependencies": {}
+  }
 }

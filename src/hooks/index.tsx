@@ -2,7 +2,7 @@ import { useContext, useMemo } from 'react';
 
 import { ConfigContext, Config } from '../contexts';
 
-export function useConfig(selector: (config: Config) => Config | any) {
+export function useConfig(selector?: (config: Config) => Config | any) {
   const config: Config = useContext(ConfigContext);
 
   const value = useMemo(() => {
