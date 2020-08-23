@@ -5,6 +5,7 @@
 ## Table of contents
 
 - [Use Case](#use-case)
+- [Compatibility](#compatibility)
 - [Installation](#installation)
   - [NPM](#npm)
   - [YARN](#yarn)
@@ -18,6 +19,10 @@
 ## Use case
 
 You need a proper way to access config from your react components and custom hooks.
+
+## Compatibility
+
+Our package currently supports apps with **React >= 16.8.0**. You can use this package for React and React Native Apps.
 
 ## Installation
 
@@ -37,7 +42,7 @@ yarn add @blackbox-vision/react-use-config
 
 ## Example Usage
 
-The usage is really simple:
+After reading and performing the previous steps, you should be able to import the library and use it like in this example:
 
 1. Define the `config` and wrap your App in `ConfigProvider`:
 
@@ -58,7 +63,7 @@ const App = () => (
   </ConfigProvider>
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default App;
 ```
 
 2. Import the `hook` and consume the config part you really need:
